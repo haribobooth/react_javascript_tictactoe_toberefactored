@@ -1,0 +1,120 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: salmon;
+  animation-name: backgroundcycle;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes backgroundcycle {
+  0% {
+    background-color: salmon;
+  }
+
+  20% {
+    background-color: dodgerblue;
+  }
+
+  40% {
+    background-color: tomato;
+  }
+
+  60% {
+    background-color: green;
+  }
+
+  80% {
+    background-color: magenta;
+  }
+
+  100% {
+    background-color: yellow;
+  }
+}
+
+.tile {
+  border: 2px solid black;
+  display: inline-block;
+  margin 1px;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  font-size: 10em;
+  background-color: white;
+}
+
+.tile:hover {
+  cursor: pointer;
+  background-color: skyblue;
+  border-color: limegreen;
+}
+
+#white:hover {
+  color: skyblue;
+}
+
+#winner-announcer {
+  font-size: 10em;
+  font-family: cursive;
+  color: lime;
+}
+
+#white {
+  color: white;
+}
+
+@keyframes challengeMode {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateX(250px) rotate(90deg);
+  }
+
+  50% {
+    transform: translateX(0px) rotate(180deg);
+  }
+
+  75% {
+    transform: translateX(-250px) rotate(270deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+@keyframes challengeModeHarder {
+  0% {
+    transform: translateX(0) rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: translateX(250px) rotate(90deg) scale(0.5);
+  }
+
+  50% {
+    transform: translateX(0px) rotate(180deg) scale(2);
+  }
+
+  75% {
+    transform: translateX(-250px) rotate(270deg) scale(0.5);
+  }
+
+  100% {
+    transform: translateX(0) rotate(360deg) scale(1);
+  }
+}
+
+#overall-wrapper {
+  animation-duration: 2s;
+  /*animation-name: challengeMode;*/
+  /*animation-name: challengeModeHarder;*/
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
